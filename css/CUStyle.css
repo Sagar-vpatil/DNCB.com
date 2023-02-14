@@ -1,0 +1,346 @@
+
+@import url('../css/fonts.css');
+
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    /*    Theme Colors     */
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+    /*   Gradient Color   */
+    --sky:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /*    Theme font family   */
+    --Abel:'Abel', cursive;
+    --Anton:'Anton', cursive;
+    --Josefin:'Josefin', cursive;
+    --Lexend:'Lexend', cursive;
+    --Livvic:'Livvic', cursive;
+}
+
+/* ********************Global Classes******************* */
+a{ 
+    text-decoration: none;
+    color:var(--text-gray)
+ }
+
+ .flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+h2{
+    font-family: var(--Lexend);
+    color: var(--bg-color);
+}
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 5vw;
+
+}
+.text-gray{
+    color: var(--text-gray);
+}
+
+p{
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+/* *********x***********Global Classes********x*********** */
+
+/* ********************navbar******************* */
+.nav{
+    background:white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+.nav .nav-menu .nav-brand img{
+    padding-right: .1rem;
+    width: 1.9rem;
+    clip-path: circle();
+}
+
+
+.nav .toggle-collapse{
+    position: absolute;
+    top:0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+
+}
+
+.nav .toggle-collapse .toggle-icons i{
+   font-size: 1.4rem;
+   color:var(--text-gray);
+}
+
+.nav .nav-items{
+    display: flex;
+    margin:0;
+}
+
+.collapse{
+    height: 30rem;
+
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+    /*text-decoration: underline;*/
+}
+.nav .nav-brand{
+    font-size:1.6rem;
+    padding:1rem 0;
+    display: block;
+    font-family: var(--Lexend);
+    font-size: 1.6rem;
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+.nav .social i{
+    padding: 0 .2rem;
+}
+/* ********x************navbar**********x********* */
+
+/* ************** Site Title ************* */
+
+main .site-title{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+    padding-top: 3rem;
+    display: flex;
+    
+}
+main .site-title .insert1{
+ padding-left: 25rem;   
+   
+}
+
+
+main .site-title .insert1 .gallary{
+margin: 5px;
+border: 3px solid var(--bg-color);
+width: 40rem;
+height: 15rem ;
+flex-direction: column;
+margin: 3rem 2rem;
+box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+
+main .site-title .insert1 .gallary .text{
+
+background: var(--sky);
+border-radius: 3rem;
+margin: .6rem 14rem;
+padding: .6rem 1rem;
+}
+
+main .site-title .insert1 .gallary .text1{
+    padding-left: 1rem;
+
+}
+
+
+main .site-title .insert1 .gallary .text2{
+    background: var(--sky);
+    border-radius: 3rem;
+    margin: .6rem 14rem;
+    padding: .6rem 1rem;
+    
+
+}
+
+
+
+  
+/* ******X******** Site Title *******X****** */
+
+@media only screen and (max-width: 1130px){
+    main .site-title .insert1{
+        padding-left: 15rem;
+    }
+}
+
+
+/*        Viewport less then or equal to 750px           */
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu, .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    main .site-title .insert1{
+        padding-left: 5rem;
+    }
+
+
+    main .site-title .insert1 .gallary{
+        width: 29rem;
+       
+    }
+
+    main .site-title .insert1 .gallary .text{
+        margin: .6rem 9rem;
+    }
+
+    main .site-title .insert1 .gallary .text1{
+        margin: .6rem 6.5rem;
+    
+    }
+
+    main .site-title .insert1 .gallary .text2{
+        margin:.6rem auto ;
+    }
+}
+
+/*              Viewport less then or equal to 520px            */
+
+@media only screen and (max-width: 520px){
+    main .blog{
+        height: 125vh;
+    }
+
+    .site-content .post-content > .post-image .post-info{
+        display: none;
+    }
+
+    footer.footer .container > div{
+        padding:  1rem .9rem !important;
+    }
+
+    footer .rights{
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+    
+    main .site-title .insert1{
+        padding-left: 2rem;
+    }
+
+
+    main .site-title .insert1 .gallary{
+        width: 22rem;
+        height: 12rem;
+       
+    }
+
+    main .site-title .insert1 .gallary .text{
+        margin: .6rem 5rem;
+    }
+
+    main .site-title .insert1 .gallary .text1{
+        margin: .6rem auto;
+    
+    }
+
+   
+
+}
+
+/*        x      Viewport less then or equal to 520px       x     */
+
+@media only screen and (max-width: 400px){
+    main .site-title .insert1{
+        padding-left: .8rem;
+    }
+
+
+    main .site-title .insert1 .gallary{
+        width: 19rem;
+        height: 12rem;
+       
+    }
+
+    main .site-title .insert1 .gallary .text{
+        margin: .6rem auto;
+    }
+
+    main .site-title .insert1 .gallary .text1{
+        margin: .6rem auto;
+    
+    }
+
+    main .site-title .insert1 .gallary .text2{
+        margin:.6rem auto ;
+    }
+}
