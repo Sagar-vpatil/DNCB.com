@@ -585,9 +585,20 @@ footer.footer .move-up span:hover{
 
 /*        x      Viewport less then or equal to 520px       x     */
 
+/*              Viewport less then or equal to 400px            */
+@media only screen and (max-width: 400px){
+
+    main .site-content{
+        margin-top: -10rem;
+    }
+
+    main .blog-content .blog-title h3{
+        background-color: var(--bg-color);
+        color: var(--white);
+    }
+}
+
 /*              Viewport less then or equal to 320px            */
-
-
 @media only screen and (max-width: 350px){
 
     main .site-content{
