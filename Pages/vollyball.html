@@ -16,6 +16,48 @@
    <link rel="stylesheet" href="../css/aos.css">
   <!--Add Style-->
   <link rel="stylesheet" href="../css/VStyle.css">
+  <style>
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .card {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #f0f8ff; /* Light color for the card */
+      border: 2px solid #333;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+    .card-heading {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-align: center;
+      color: #333;
+    }
+    .card-title {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .card-text {
+      font-size: 1.2em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
     <nav class="nav">
@@ -37,7 +79,7 @@
                 <a href="../Pages/cricket.html">Cricket</a>
               </li>
               <li class="nav-link">
-                <a href="../Pages/vollyball.html">volleyball</a>
+                <a href="../Pages/vollyball.html">Volleyball</a>
               </li>
               <li class="nav-link">
                 <a href="../Pages/C-Us.html">Contact Us</a>
@@ -57,26 +99,16 @@
       <!-- ------------------------------- Main Site Section ------------------------------------- -->
       <!-- -------- Site Title --------------- -->
       <main>
-        
         <section class="site-title">
-          <div class="site-backgraound" data-aos="fade-up" data-aos-delay="100">
-            <div class="insert1">
-              <div class="gallary">
-            <div class="CrContent flex-row">
-              <h2 class="text " data-aos="flip-up" data-aos-delay="100">volleyball</h2><br>
-              <h3 class="text1 " data-aos="flip-up" data-aos-delay="100">Captain League 2021 Winner</h3><br>
-              <h3 class="text2 " data-aos="flip-up" data-aos-delay="100">Captain Mohit</h3><br>
-              
-              </div>  
-             
-              
-                 
-              
-              
-             
-            
-         
-         </div>
+          <div class="card-container">
+            <div class="card">
+              <img src="../assets2/Players/Mohit.jpg" alt="Winning Captain">
+              <div class="card-body">
+                <h2 class="card-heading">🏆Captain's League Winner In Volleyball🏐</h2>
+                <h5 class="card-title">Mohit Patil</h5>
+                <p class="card-text">Year: August 2021</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>

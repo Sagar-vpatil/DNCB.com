@@ -8,85 +8,117 @@
   <!--Font Awesome-->
   <link rel="stylesheet" href="../css/all.css">
 
-   <!-- --- Owl-Carousel -->
-   <link rel="stylesheet" href="../css/owl.carousel.min.css">
-   <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <!-- --- Owl-Carousel -->
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
     
-   <!-- --- AOS Library -->
-   <link rel="stylesheet" href="../css/aos.css">
+  <!-- --- AOS Library -->
+  <link rel="stylesheet" href="../css/aos.css">
   <!--Add Style-->
   <link rel="stylesheet" href="../css/CStyle.css">
+  <style>
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .card {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #f0f8ff; /* Light color for the card */
+      border: 2px solid #333;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+    .card-heading {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-align: center;
+      color: #333;
+    }
+    .card-title {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .card-text {
+      font-size: 1.2em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-menu flex-row">
-           <div class="nav-brand">
-              <a href="#" class="text-gray"><img src="../assets2/Logo.jpeg" alt="logo" >DNCB</a>
-           </div>
-           <div class="toggle-collapse">
-            <div class="toggle-icons">
-              <i class="fas fa-bars"></i>
-            </div>
-           </div>
-           <div>
-            <ul class="nav-items">
-              <li class="nav-link">
-                <a href="../index.html">Home</a>
-              </li>
-              <li class="nav-link">
-                <a href="../Pages/cricket.html">Cricket</a>
-              </li>
-              <li class="nav-link">
-                <a href="../Pages/vollyball.html">volleyball</a>
-              </li>
-              <li class="nav-link">
-                <a href="../Pages/C-Us.html">Contact Us</a>
-              </li>
-            </ul>
-           </div>
-           <div class="social">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-           </div>
+  <nav class="nav">
+    <div class="nav-menu flex-row">
+      <div class="nav-brand">
+        <a href="#" class="text-gray"><img src="../assets2/Logo.jpeg" alt="logo">DNCB</a>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icons">
+          <i class="fas fa-bars"></i>
         </div>
-      </nav>
+      </div>
+      <div>
+        <ul class="nav-items">
+          <li class="nav-link">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="nav-link">
+            <a href="../Pages/cricket.html">Cricket</a>
+          </li>
+          <li class="nav-link">
+            <a href="../Pages/vollyball.html">Volleyball</a>
+          </li>
+          <li class="nav-link">
+            <a href="../Pages/C-Us.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
       
-        <!-- -------------X--------------------Navigation--------------------X---------------------- -->
-      <!-- ------------------------------- Main Site Section ------------------------------------- -->
-      <!-- -------- Site Title --------------- -->
-      <main>
-        
-        <section class="site-title">
-          <div class="site-backgraound" data-aos="fade-up" data-aos-delay="100">
-            <div class="insert1">
-              <div class="gallary">
-            <div class="CrContent flex-row">
-              <h2 class="text " data-aos="flip-up" data-aos-delay="100">Cricket</h2><br>
-              <h3 class="text1 " data-aos="flip-up" data-aos-delay="100">Captain League 2021 Winner</h3><br>
-              <h3 class="text2 " data-aos="flip-up" data-aos-delay="100">Captain Aakash</h3><br>
-              
-              </div>  
-             
-              
-                 
-              
-              
-             
-            
-         
-         </div>
+  <!-- -------------X--------------------Navigation--------------------X---------------------- -->
+  <!-- ------------------------------- Main Site Section ------------------------------------- -->
+  <!-- -------- Site Title --------------- -->
+  <main>
+    <section class="site-title">
+      <div class="card-container">
+        <div class="card">
+          <img src="../assets2/Players/AT.jpg" alt="Winning Captain">
+          <div class="card-body">
+            <h2 class="card-heading">🏆Captain's League Winner In Cricket🏏</h2>
+            <h5 class="card-title">Aakash Tijare</h5>
+            <p class="card-text">Year: June 2021</p>
           </div>
-        </section>
-      </main>
-        <!-- ---X----- Site Title ------X------- -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ---X----- Site Title ------X------- -->
 
-        <!-- --------------x----------------- Main Site Section ----------------------x--------------- -->
+  <!-- --------------x----------------- Main Site Section ----------------------x--------------- -->
 
+  
 
-
-     <!--Jquery Library file-->
+  <!--Jquery Library file-->
   <script src="../js/Jquery3.6.3.min.js"></script>
 
   <!-- --- Owl-Carousel js -->
@@ -97,7 +129,5 @@
   
   <!--Add JavaScript file-->
   <script src="../js/main2.js"></script>
-
-  
 </body>
 </html>

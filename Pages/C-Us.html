@@ -15,7 +15,49 @@
    <!-- --- AOS Library -->
    <link rel="stylesheet" href="../css/aos.css">
   <!--Add Style-->
-  <link rel="stylesheet" href="../css/CUStyle.css">
+  <link rel="stylesheet" href="../css/VStyle.css">
+  <style>
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .card {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #f0f8ff; /* Light color for the card */
+      border: 2px solid #333;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+    .card-heading {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-align: center;
+      color: #333;
+    }
+    .card-title {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .card-text {
+      font-size: 1.2em;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
     <nav class="nav">
@@ -37,7 +79,7 @@
                 <a href="../Pages/cricket.html">Cricket</a>
               </li>
               <li class="nav-link">
-                <a href="../Pages/vollyball.html">volleyball</a>
+                <a href="../Pages/vollyball.html">Volleyball</a>
               </li>
               <li class="nav-link">
                 <a href="../Pages/C-Us.html">Contact Us</a>
@@ -57,27 +99,16 @@
       <!-- ------------------------------- Main Site Section ------------------------------------- -->
       <!-- -------- Site Title --------------- -->
       <main>
-        
         <section class="site-title">
-          <div class="site-backgraound" data-aos="fade-up" data-aos-delay="100">
-            <div class="insert1">
-              <div class="gallary">
-            <div class="CrContent flex-row">
-              <h2 class="text " data-aos="flip-up" data-aos-delay="100">Contact-US</h2><br>
-              <h3 class="text1 " data-aos="flip-up" data-aos-delay="100">1st Floor,Cricket Centre
-                 Shree Dakshin Mukhi Hanuman (SDMH) Stadium Daulat Nagar
-                 ,Jalgaon-425001 Maharastra India</h3><br>
+          <div class="card-container">
+            <div class="card">
               
-              </div>  
-             
-              
-                 
-              
-              
-             
-            
-         
-         </div>
+              <div class="card-body">
+                <h2 class="card-heading">Contact Us</h2>
+                <!-- <h5 class="card-title">Address</h5> -->
+                <p class="card-text">1st Floor, Cricket Centre Shree Dakshin Mukhi Hanuman (SDMH) Stadium Daulat Nagar, Jalgaon-425001<br>Maharashtra, India</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>

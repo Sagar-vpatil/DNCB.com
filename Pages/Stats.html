@@ -16,6 +16,46 @@
    <link rel="stylesheet" href="../css/aos.css">
   <!--Add Style-->
   <link rel="stylesheet" href="../css/StStyle.css">
+  <style>
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f0f8ff; /* Light color for the card */
+    border: 2px solid #ccc; /* Border style */
+  }
+
+  .card-body {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .card-text {
+    font-size: 1.2em;
+    color: #666;
+  }
+
+  .emoji {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+</style>
 </head>
 <body>
     <nav class="nav">
@@ -57,28 +97,20 @@
       <!-- ------------------------------- Main Site Section ------------------------------------- -->
       <!-- -------- Site Title --------------- -->
       <main>
-        
         <section class="site-title">
-          <div class="site-backgraound" data-aos="fade-up" data-aos-delay="100">
-            <div class="insert1">
-              <div class="gallary">
-            <div class="CrContent flex-row">
-              <h3 class="text" data-aos="flip-up" data-aos-delay="100">Matches - 0</h3><br>
-              <h3 class="text2" data-aos="flip-up" data-aos-delay="100">Runs - 0</h3><br>
-              <h3 class="text3" data-aos="flip-up" data-aos-delay="100">Wickets - 0</h3><br>
-              <h3 class="text4" data-aos="flip-up" data-aos-delay="100">50s - 0</h3><br>
-              <h3 class="text5" data-aos="flip-up" data-aos-delay="100">sixes - 0</h3><br>
-              <h3 class="text6" data-aos="flip-up" data-aos-delay="100">Fours -0</h3><br>
-              </div>  
-             
-              
-                 
-              
-              
-             
-            
-         
-         </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Player's Stats</h2>
+                <div class="emoji">🏏</div>
+                <p class="card-text">Matches - 0</p>
+                <p class="card-text">Runs - 0</p>
+                <p class="card-text">Wickets - 0</p>
+                <p class="card-text">50s - 0</p>
+                <p class="card-text">Sixes - 0</p>
+                <p class="card-text">Fours - 0</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
