@@ -1,0 +1,29 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+.card-header {
+    font-size: 1.2em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Removes bullet points */
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
