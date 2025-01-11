@@ -20,17 +20,36 @@ document.getElementById("addPlayer").addEventListener("click", () => {
 
 // Update the player list display
 function updatePlayerList() {
+    let countPlayers = 0;
     playersList.innerHTML = "";
     players.forEach((player, index) => {
+        countPlayers = index + 1;
         const li = document.createElement("li");
         // li.textContent = `${player.name} (Grade: ${player.grade})`;
-        li.innerHTML = `<b>🔹  ${player.name} (Grade: ${player.grade})</b>`;
+        li.innerHTML = `<b> ${countPlayers}. ${player.name} (Grade: ${player.grade})</b>`;
         playersList.appendChild(li);
     });
 }
 
+const divideTeamsButton = document.getElementById('divideTeams');
+const loader = document.getElementById('loader');
+
+        divideTeamsButton.addEventListener('click', () => {
+            // Show the sports loader
+            loader.style.display = 'flex';
+
+            // Simulate a delay (5 seconds) for team division
+            setTimeout(() => {
+                // Hide the sports loader
+                loader.style.display = 'none';
+
+                // Perform team division logic here
+                divideTeams();
+            }, 5000);
+        });
+
 // Divide players into two balanced teams
-document.getElementById("divideTeams").addEventListener("click", () => {
+function divideTeams() {
     if (players.length < 2) {
         alert("Please add at least two players!");
         return;
@@ -54,6 +73,28 @@ document.getElementById("divideTeams").addEventListener("click", () => {
         });
     });
 
+    console.log('Team A:', teamA);
+    console.log('Team B:', teamB);
+
+    let diff = teamA.length - teamB.length;
+    if (diff > 1){
+        let i = 0;
+        while (diff > 1){
+            if(teamA.length > teamB.length){
+                teamB.push(teamA[i]);
+                teamA.splice(i, 1);
+            } else {
+                teamA.push(teamB[i]);
+                teamB.splice(i, 1);
+            }
+            // teamB.push(teamA[i]);
+            // teamA.splice(i, 1);
+            diff = teamA.length - teamB.length;
+        }
+    }
+   
+    console.log('Team A:', teamA);
+    console.log('Team B:', teamB);
     // Handle odd number of players
     let sharedPlayer = null;
     if (teamA.length !== teamB.length) {
@@ -76,7 +117,7 @@ document.getElementById("divideTeams").addEventListener("click", () => {
     console.log('Shared Player:', sharedPlayer);
 
     displayTeams(teamA, teamB, sharedPlayer);
-});
+}
 
 
 //Swap Players
@@ -128,3 +169,38 @@ function resetTeams() {
     sharedPlayerList.innerHTML = '';
     alert('Teams have been reset!');
 }
+
+const flipTossButton = document.getElementById('flipToss');
+const tossLoader = document.getElementById('tossLoader');
+const tossResult = document.getElementById('tossResult');
+
+flipTossButton.addEventListener('click', () => {
+    // Show the toss loader
+    tossLoader.style.display = 'flex';
+
+    // Simulate toss flipping for 5 seconds
+    setTimeout(() => {
+        // Hide the toss loader
+        tossLoader.style.display = 'none';
+
+        // Generate random toss result
+        // const tossOutcome = Math.random() > 0.5 ? 'Heads' : 'Tails';
+        // Generate random number between 0 and 1
+        let randomNumber = Math.floor(Math.random() * 2) + 1;
+        console.log(randomNumber);
+        if (randomNumber % 2 === 0) {
+            tossOutcome = 'Heads';
+        }
+        else {
+            tossOutcome = 'Tails';
+        } 
+
+        // Show toss result with animation
+        tossResult.style.display = 'block';
+        tossResult.textContent = `Result: ${tossOutcome}`;
+        // Hide the result after 5 seconds
+        setTimeout(() => {
+            tossResult.style.display = 'none';
+        }, 5000);
+    }, 5000);
+});

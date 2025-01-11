@@ -27,3 +27,226 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
+
+/* Sports Loader Styles */
+.sports-loader {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.sports-loader p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeText 2s infinite;
+}
+
+/* Ball animation */
+.ball {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #ff4500 60%, #000000);
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+    position: relative;
+}
+
+/* Keyframes for ball bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-150px);
+    }
+}
+
+/* Keyframes for fading text */
+@keyframes fadeText {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sports-loader p {
+        font-size: 1.2rem;
+    }
+
+    .ball {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sports-loader p {
+        font-size: 1rem;
+    }
+
+    .ball {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Toss Section */
+.toss-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.toss-button {
+    padding: 12px 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff7f50, #ff4500);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.toss-button:hover {
+    background: linear-gradient(to right, #ff4500, #ff7f50);
+    transform: scale(1.1);
+}
+
+/* Toss Loader */
+.toss-loader {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+.toss-loader p {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    animation: fadeText 2s infinite;
+}
+
+/* Coin Styles */
+.coin {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: coinFlip 2s infinite ease-in-out;
+}
+
+.coin div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.coin .front {
+    background: radial-gradient(circle, #f7c046, #d4af37);
+}
+
+.coin .back {
+    background: radial-gradient(circle, #1e90ff, #104e8b);
+    transform: rotateY(180deg);
+}
+
+/* Coin Flip Animation */
+@keyframes coinFlip {
+    0%, 100% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Toss Result */
+.toss-result {
+    display: none; /* Hidden initially */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff7f50;
+    text-shadow: 0 0 15px rgba(255, 127, 80, 0.8);
+    margin-top: 20px;
+    animation: resultFade 5s ease-out;
+}
+
+/* Keyframes for result fade */
+@keyframes resultFade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .coin {
+        width: 100px;
+        height: 100px;
+    }
+
+    .toss-loader p {
+        font-size: 1.4rem;
+    }
+
+    .toss-result {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coin {
+        width: 80px;
+        height: 80px;
+    }
+
+    .toss-loader p {
+        font-size: 1.2rem;
+    }
+
+    .toss-result {
+        font-size: 1.2rem;
+    }
+}
